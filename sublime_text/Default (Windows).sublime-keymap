@@ -1,0 +1,22 @@
+[
+// Move to the next character
+{ "keys": ["ctrl+alt+space"], "command": "move", "args": {"by": "characters", "forward": true} },
+// Move to the previous character
+{ "keys": ["shift+space"], "command": "move", "args": {"by": "characters", "forward": false} },
+// Move to the next word
+{ "keys": ["alt+space"], "command": "move", "args": {"by": "word_ends", "forward": true} },
+// Move to the previous word
+{ "keys": ["shift+alt+space"], "command": "move", "args": {"by": "word_ends", "forward": false} },
+// Move to the next line
+{ "keys": ["alt+enter"], "command": "move", "args": {"by": "lines", "forward": true} },
+// Move to the previous line
+{ "keys": ["shift+alt+enter"], "command": "move", "args": {"by": "lines", "forward": false} }
+// Move to the end of line
+,{ "keys": ["alt+]"], "command": "move_to", "args": {"to": "hardeol", "extend": false} }
+// Move to teh beginning of line
+,{ "keys": ["alt+["], "command": "move_to", "args": {"to": "hardbol", "extend": false} }
+// Fix end of line + select
+//,{ "keys": ["ctrl+alt+]"], "command": "move_to", "args": {"to": "hardeol", "extend": true} }
+// Fix beginning of line + select
+//,{ "keys": ["ctrl+alt+["], "command": "move_to", "args": {"to": "hardbol", "extend": true} }
+]
