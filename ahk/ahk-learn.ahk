@@ -102,42 +102,42 @@ else
 
 ^+c::
     if (clip_f = "")
-	{
-		msgbox, keeping appending clipboard.
-		clip_f = 1
-	}
-	else
-	{
-		msgbox, stop appending clipboard.
-		clip_f = 
-		clipboardSave =
-	}
-	return 
+    {
+        msgbox, keeping appending clipboard.
+        clip_f = 1
+    }
+    else
+    {
+        msgbox, stop appending clipboard.
+        clip_f = 
+        clipboardSave =
+    }
+    return 
 
 ^+p::
-	if (clip_f = 1)
-	{
-		send, ^c
-		ClipWait, 2
-		if ErrorLevel
-		{
-			MsgBox, The attempt to copy text onto the clipboard failed.
-			return
-		}
-		MsgBox, clipboard = %clipboard%
-		clipboardSave = %clipboardSave%`n%clipboard%
-		clipboard = %clipboardSave%
-	}
-	else
-	{
-		Send, ^c
-		ClipWait, 2
-		if ErrorLevel
-		{
-			MsgBox, The attempt to copy text onto the clipboard failed.
-			return
-		}
-		MsgBox, clipboard = %clipboard%
-	}
-	return
+    if (clip_f = 1)
+    {
+        send, ^c
+        ClipWait, 2
+        if ErrorLevel
+        {
+            MsgBox, The attempt to copy text onto the clipboard failed.
+            return
+        }
+        MsgBox, clipboard = %clipboard%
+        clipboardSave = %clipboardSave%`n%clipboard%
+        clipboard = %clipboardSave%
+    }
+    else
+    {
+        Send, ^c
+        ClipWait, 2
+        if ErrorLevel
+        {
+            MsgBox, The attempt to copy text onto the clipboard failed.
+            return
+        }
+        MsgBox, clipboard = %clipboard%
+    }
+    return
 
